@@ -1,0 +1,64 @@
+#include<iostream>
+using namespace std;
+
+class marks
+{
+    public:
+  int roll_no;
+  string name;
+  int marks;
+  
+};
+
+  class physics: public marks
+{
+    public:
+  int imarks;  
+};
+class chemistry: public marks
+{
+    public:
+  int imarks;  
+};
+class maths: public marks
+{
+    public:
+  int imarks;  
+};
+
+int main()
+{
+    marks ma1;
+    physics p1;
+    chemistry c1;
+    maths mt1;
+    int a;
+    int c=0;
+    int d=0;
+    int e=0;
+    int f=0;
+    cout<<"ENTER THE NO. OF STUDENTS:";
+    cin>>a;
+    for(ma1.roll_no=1;ma1.roll_no<=a;ma1.roll_no++)
+    {
+        cout<<ma1.roll_no<<":";
+        cin>>ma1.name;
+        cout<<"marks scored:";
+        cin>>ma1.marks;
+        cout<<"MARKS SCORED IN PHYSICS:";
+        cin>>p1.imarks;
+        cout<<"MARKS SCORED IN CHEMISTRY:";
+        cin>>c1.imarks;
+        cout<<"MARKS SCORED IN MATHS:";
+        cin>>mt1.imarks;
+        
+     c=c+ma1.marks;  
+     d=d+p1.imarks; 
+     e=e+c1.imarks; 
+     f=f+mt1.imarks;
+    }
+    cout<<"AVERAGE MARKS OF CLASS IS:"<<c/a;
+    cout<<"AVERAGE MARKS OF PHYSICS OF CLASS IS:"<<d/a;
+    cout<<"AVERAGE MARKS OF CHEMISTRY OF CLASS IS:"<<e/a;
+    cout<<"AVERAGE MARKS OF MATHS OF IS:"<<f/a;
+}
